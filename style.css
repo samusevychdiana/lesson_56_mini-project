@@ -1,0 +1,279 @@
+:root {
+    --color-primary: #ff6b35;
+    --color-dark: #1a1a2e;
+    --color-bg: #f8f9fa;
+    --font-main: font-family: "Montserrat", sans-serif;
+    --font-second: font-family: "Roboto", sans-serif;
+    --btn-color: rgba(255, 78, 80, 1);
+    --btn2-color: #FFA507;
+    --btn3-color: #4E73DB;
+    --btn4-color: #1CD7AD;
+    --text-color: #FFFFFF;
+}
+
+@media (min-width: 1024px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Montserrat", sans-serif;
+        color: var(--color-bg);
+    }
+
+    /* ================= HEADER ================= */
+    .header {
+        position: relative;
+        height: 100vh;
+    }
+
+    /* HERO IMAGE */
+    .hero-content {
+        position: relative;
+        height: 100%;
+    }
+
+    .hero-content img {
+        width: 100%;
+        height: 800px;
+    }
+
+    /* TEXT OVER IMAGE */
+    .hero-content h1,
+    .hero-content p,
+    .hero-content button {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: var(--text-color);
+    }
+
+    .hero-content h1 {
+        font-family: var(--font-main);
+        font-size: 52px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .hero-content p {
+        font-family: var(--font-second);
+        font-size: 24px;
+        font-weight: 300;
+    }
+
+    .hero-content button {
+        font-family: var(--font-main);
+        font-weight: 700;
+        font-size: 14px;
+        background: var(--btn-color);
+        color: var(--text-color);
+        padding: 10px 13px;
+        border-radius: 25px;
+    }
+
+    /* NAV */
+    nav {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        z-index: 2;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: white;
+        border: 1px solid white;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+
+    /* LOGO */
+    .header h2 {
+        position: absolute;
+        top: 20px;
+        left: 40px;
+        color: white;
+        z-index: 2;
+    }
+
+    /* ================= SECTION 1 ================= */
+    .content {
+        text-align: center;
+        padding: 70px 20px;
+    }
+
+    .content h2 {
+        margin-bottom: 40px;
+    }
+
+    /* ВАЖЛИВО: твій HTML без wrapper — робимо grid-хак */
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        max-width: 1100px;
+        margin: auto;
+        text-align: center;
+    }
+
+    /* ГРУПУЄМО КОЖНІ 3 ЕЛЕМЕНТИ (img+h3+p) */
+    .container img {
+        width: 100px;
+        border-radius: 50%;
+        margin: auto;
+    }
+
+    /* щоб текст виглядав як картки */
+    .container h3 {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .container p {
+        font-size: 13px;
+        color: #777;
+        margin-bottom: 20px;
+    }
+
+    /* кнопка */
+    .content button {
+        margin-top: 30px;
+        border: 1px solid #ff5a5f;
+        background: transparent;
+        color: #ff5a5f;
+        padding: 10px 24px;
+        border-radius: 25px;
+    }
+
+    /* ================= DARK SECTION ================= */
+    .content2 {
+        background: #111;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .content2 h2 {
+        margin-bottom: 30px;
+    }
+
+    .content2 h3 {
+        margin-top: 20px;
+    }
+
+    .content2 p {
+        max-width: 600px;
+        margin: 10px auto;
+        color: #bbb;
+        font-size: 14px;
+    }
+
+    .content2 button {
+        margin-top: 30px;
+        background: #4a90e2;
+        color: white;
+        padding: 12px 28px;
+        border-radius: 25px;
+    }
+
+    .content2 img {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    /* ================= SECTION 3 ================= */
+    .content3 {
+        background: black;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .content3 h2 {
+        margin-bottom: 30px;
+    }
+
+    .content3 h3 {
+        margin-top: 20px;
+    }
+
+    .content3 p {
+        max-width: 600px;
+        margin: 10px auto;
+        color: #aaa;
+        font-size: 14px;
+    }
+
+    .content3 button {
+        margin-top: 30px;
+        background: #00c9a7;
+        color: white;
+        padding: 12px 28px;
+        border-radius: 25px;
+    }
+
+    .content3 img {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+        background: #111;
+        color: white;
+        padding: 60px 20px;
+    }
+
+    .footer-content {
+        max-width: 1100px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .footer-content p {
+        margin-top: 10px;
+        color: #aaa;
+    }
+
+    /* links */
+    .footer-links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        text-align: left;
+    }
+
+    .footer-links h3 {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul {
+        list-style: none;
+    }
+
+    .footer-links a {
+        text-decoration: none;
+        color: #aaa;
+        font-size: 14px;
+        display: block;
+        margin: 5px 0;
+    }
+
+    /* bottom */
+    .footer-bottom {
+        text-align: center;
+        margin-top: 30px;
+        color: #777;
+        font-size: 13px;
+    }
+}
